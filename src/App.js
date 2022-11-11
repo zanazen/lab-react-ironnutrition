@@ -1,15 +1,13 @@
 // src/App.js
-import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import foods from './foods.json';
-import FoodBox from './components/FoodBox';
+import FoodList from './components/FoodList/FoodList'
 
 function App() {
-  const [allFoods] = useState(foods)
-  allFoods.map ((food) => {
-    return <FoodBox food={ food } />
-  })
-  return <div className="App"></div>;
-
+  return ( 
+ <div className="App">
+      <FoodList />
+ </div>
+  )
 }
 export default App;
